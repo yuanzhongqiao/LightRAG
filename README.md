@@ -572,18 +572,7 @@ await rag.apipeline_process_enqueue_documents(string_or_strings)" tabindex="0" r
     <span class="pl-s1">prompt</span><span class="pl-c1">=</span><span class="pl-s">"Provide a detailed explanation suitable for high school students studying physics."</span>,
     <span class="pl-s1">param</span><span class="pl-c1">=</span><span class="pl-en">QueryParam</span>(<span class="pl-s1">mode</span><span class="pl-c1">=</span><span class="pl-s">"hybrid"</span>)
 )</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="rag.query_with_separate_keyword_extraction(
-    query=&quot;Explain the law of gravity&quot;,
-    prompt=&quot;Provide a detailed explanation suitable for high school students studying physics.&quot;,
-    param=QueryParam(mode=&quot;hybrid&quot;)
-)" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+  
   </div></div>
 <div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="27963390" _msthash="365">使用 Neo4J 进行存储</h3><a id="user-content-using-neo4j-for-storage" class="anchor" aria-label="永久链接：使用 Neo4J 进行存储" href="#using-neo4j-for-storage" _mstaria-label="834496" _msthash="366"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <ul dir="auto">
@@ -608,30 +597,7 @@ await rag.apipeline_process_enqueue_documents(string_or_strings)" tabindex="0" r
     <span class="pl-s1">graph_storage</span><span class="pl-c1">=</span><span class="pl-s">"Neo4JStorage"</span>, <span class="pl-c">#&lt;-----------override KG default</span>
     <span class="pl-s1">log_level</span><span class="pl-c1">=</span><span class="pl-s">"DEBUG"</span>  <span class="pl-c">#&lt;-----------override log_level default</span>
 )</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="export NEO4J_URI=&quot;neo4j://localhost:7687&quot;
-export NEO4J_USERNAME=&quot;neo4j&quot;
-export NEO4J_PASSWORD=&quot;password&quot;
-
-# When you launch the project be sure to override the default KG: NetworkX
-# by specifying kg=&quot;Neo4JStorage&quot;.
-
-# Note: Default settings use NetworkX
-# Initialize LightRAG with Neo4J implementation.
-WORKING_DIR = &quot;./local_neo4jWorkDir&quot;
-
-rag = LightRAG(
-    working_dir=WORKING_DIR,
-    llm_model_func=gpt_4o_mini_complete,  # Use gpt_4o_mini_complete LLM model
-    graph_storage=&quot;Neo4JStorage&quot;, #<-----------override KG default
-    log_level=&quot;DEBUG&quot;  #<-----------override log_level default
-)" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+     
   </div></div>
 <p dir="auto" _msttexthash="52540150" _msthash="370">有关工作示例，请参阅 test_neo4j.py。</p>
 <div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="35597588" _msthash="371">使用 PostgreSQL 进行存储</h3><a id="user-content-using-postgresql-for-storage" class="anchor" aria-label="永久链接：使用 PostgreSQL 进行存储" href="#using-postgresql-for-storage" _mstaria-label="1108575" _msthash="372"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
@@ -671,44 +637,7 @@ rag = LightRAG(
 <span class="pl-k">drop</span> <span class="pl-k">INDEX</span> vertex_idx_node_id;
 <span class="pl-k">drop</span> <span class="pl-k">INDEX</span> entity_idx_node_id;
 <span class="pl-k">drop</span> <span class="pl-k">INDEX</span> entity_node_id_gin_idx;</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="load 'age';
-SET search_path = ag_catalog, &quot;$user&quot;, public;
-CREATE INDEX CONCURRENTLY entity_p_idx ON dickens.&quot;Entity&quot; (id);
-CREATE INDEX CONCURRENTLY vertex_p_idx ON dickens.&quot;_ag_label_vertex&quot; (id);
-CREATE INDEX CONCURRENTLY directed_p_idx ON dickens.&quot;DIRECTED&quot; (id);
-CREATE INDEX CONCURRENTLY directed_eid_idx ON dickens.&quot;DIRECTED&quot; (end_id);
-CREATE INDEX CONCURRENTLY directed_sid_idx ON dickens.&quot;DIRECTED&quot; (start_id);
-CREATE INDEX CONCURRENTLY directed_seid_idx ON dickens.&quot;DIRECTED&quot; (start_id,end_id);
-CREATE INDEX CONCURRENTLY edge_p_idx ON dickens.&quot;_ag_label_edge&quot; (id);
-CREATE INDEX CONCURRENTLY edge_sid_idx ON dickens.&quot;_ag_label_edge&quot; (start_id);
-CREATE INDEX CONCURRENTLY edge_eid_idx ON dickens.&quot;_ag_label_edge&quot; (end_id);
-CREATE INDEX CONCURRENTLY edge_seid_idx ON dickens.&quot;_ag_label_edge&quot; (start_id,end_id);
-create INDEX CONCURRENTLY vertex_idx_node_id ON dickens.&quot;_ag_label_vertex&quot; (ag_catalog.agtype_access_operator(properties, '&quot;node_id&quot;'::agtype));
-create INDEX CONCURRENTLY entity_idx_node_id ON dickens.&quot;Entity&quot; (ag_catalog.agtype_access_operator(properties, '&quot;node_id&quot;'::agtype));
-CREATE INDEX CONCURRENTLY entity_node_id_gin_idx ON dickens.&quot;Entity&quot; using gin(properties);
-ALTER TABLE dickens.&quot;DIRECTED&quot; CLUSTER ON directed_sid_idx;
-
--- drop if necessary
-drop INDEX entity_p_idx;
-drop INDEX vertex_p_idx;
-drop INDEX directed_p_idx;
-drop INDEX directed_eid_idx;
-drop INDEX directed_sid_idx;
-drop INDEX directed_seid_idx;
-drop INDEX edge_p_idx;
-drop INDEX edge_sid_idx;
-drop INDEX edge_eid_idx;
-drop INDEX edge_seid_idx;
-drop INDEX vertex_idx_node_id;
-drop INDEX entity_idx_node_id;
-drop INDEX entity_node_id_gin_idx;" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+     
   </div></div>
 </li>
 <li><font _mstmutation="1" _msttexthash="202528846" _msthash="378">Apache AGE 的已知问题：已发布的版本出现以下问题：</font><blockquote>
@@ -724,14 +653,7 @@ drop INDEX entity_node_id_gin_idx;" tabindex="0" role="button">
 </ul>
 <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>pip install faiss-cpu
 </code></pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="pip install faiss-cpu" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+     
   </div></div>
 <p dir="auto"><font _mstmutation="1" _msttexthash="68058692" _msthash="384">如果您有 GPU 支持，也可以安装。</font><code>faiss-gpu</code></p>
 <ul dir="auto">
@@ -757,32 +679,7 @@ drop INDEX entity_node_id_gin_idx;" tabindex="0" role="button">
         }
     )
 </code></pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="async def embedding_func(texts: list[str]) -> np.ndarray:
-    model = SentenceTransformer('all-MiniLM-L6-v2')
-    embeddings = model.encode(texts, convert_to_numpy=True)
-    return embeddings
-
-# Initialize LightRAG with the LLM model function and embedding function
-    rag = LightRAG(
-        working_dir=WORKING_DIR,
-        llm_model_func=llm_model_func,
-        embedding_func=EmbeddingFunc(
-            embedding_dim=384,
-            max_token_size=8192,
-            func=embedding_func,
-        ),
-        vector_storage=&quot;FaissVectorDBStorage&quot;,
-        vector_db_storage_cls_kwargs={
-            &quot;cosine_better_than_threshold&quot;: 0.3  # Your desired threshold
-        }
-    )" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+    
   </div></div>
 <div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="14321710" _msthash="386">插入自定义 KG</h3><a id="user-content-insert-custom-kg" class="anchor" aria-label="永久链接：插入自定义 KG" href="#insert-custom-kg" _mstaria-label="575263" _msthash="387"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <div class="highlight highlight-source-python notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-s1">rag</span> <span class="pl-c1">=</span> <span class="pl-en">LightRAG</span>(
@@ -837,65 +734,7 @@ drop INDEX entity_node_id_gin_idx;" tabindex="0" role="button">
 }
 
 <span class="pl-s1">rag</span>.<span class="pl-c1">insert_custom_kg</span>(<span class="pl-s1">custom_kg</span>)</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="rag = LightRAG(
-     working_dir=WORKING_DIR,
-     llm_model_func=llm_model_func,
-     embedding_func=EmbeddingFunc(
-          embedding_dim=embedding_dimension,
-          max_token_size=8192,
-          func=embedding_func,
-     ),
-)
-
-custom_kg = {
-    &quot;entities&quot;: [
-        {
-            &quot;entity_name&quot;: &quot;CompanyA&quot;,
-            &quot;entity_type&quot;: &quot;Organization&quot;,
-            &quot;description&quot;: &quot;A major technology company&quot;,
-            &quot;source_id&quot;: &quot;Source1&quot;
-        },
-        {
-            &quot;entity_name&quot;: &quot;ProductX&quot;,
-            &quot;entity_type&quot;: &quot;Product&quot;,
-            &quot;description&quot;: &quot;A popular product developed by CompanyA&quot;,
-            &quot;source_id&quot;: &quot;Source1&quot;
-        }
-    ],
-    &quot;relationships&quot;: [
-        {
-            &quot;src_id&quot;: &quot;CompanyA&quot;,
-            &quot;tgt_id&quot;: &quot;ProductX&quot;,
-            &quot;description&quot;: &quot;CompanyA develops ProductX&quot;,
-            &quot;keywords&quot;: &quot;develop, produce&quot;,
-            &quot;weight&quot;: 1.0,
-            &quot;source_id&quot;: &quot;Source1&quot;
-        }
-    ],
-    &quot;chunks&quot;: [
-        {
-            &quot;content&quot;: &quot;ProductX, developed by CompanyA, has revolutionized the market with its cutting-edge features.&quot;,
-            &quot;source_id&quot;: &quot;Source1&quot;,
-        },
-        {
-            &quot;content&quot;: &quot;PersonA is a prominent researcher at UniversityB, focusing on artificial intelligence and machine learning.&quot;,
-            &quot;source_id&quot;: &quot;Source2&quot;,
-        },
-        {
-            &quot;content&quot;: &quot;None&quot;,
-            &quot;source_id&quot;: &quot;UNKNOWN&quot;,
-        },
-    ],
-}
-
-rag.insert_custom_kg(custom_kg)" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+    
   </div></div>
 <div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="5917184" _msthash="388">删除</h3><a id="user-content-delete" class="anchor" aria-label="永久链接：删除" href="#delete" _mstaria-label="298857" _msthash="389"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <div class="highlight highlight-source-python notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-s1">rag</span> <span class="pl-c1">=</span> <span class="pl-en">LightRAG</span>(
@@ -913,29 +752,7 @@ rag.insert_custom_kg(custom_kg)" tabindex="0" role="button">
 
 <span class="pl-c">#  Delete Document: Deleting entities and relationships associated with the document by doc id</span>
 <span class="pl-s1">rag</span>.<span class="pl-c1">delete_by_doc_id</span>(<span class="pl-s">"doc_id"</span>)</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="
-rag = LightRAG(
-     working_dir=WORKING_DIR,
-     llm_model_func=llm_model_func,
-     embedding_func=EmbeddingFunc(
-          embedding_dim=embedding_dimension,
-          max_token_size=8192,
-          func=embedding_func,
-     ),
-)
-
-#  Delete Entity: Deleting entities by their names
-rag.delete_by_entity(&quot;Project Gutenberg&quot;)
-
-#  Delete Document: Deleting entities and relationships associated with the document by doc id
-rag.delete_by_doc_id(&quot;doc_id&quot;)" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+   
   </div></div>
 <div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="22815468" _msthash="390">多文件类型支持</h3><a id="user-content-multi-file-type-support" class="anchor" aria-label="永久链接：多文件类型支持" href="#multi-file-type-support" _mstaria-label="916435" _msthash="391"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <p dir="auto"><font _mstmutation="1" _msttexthash="93436707" _msthash="392">支持读取 TXT、DOCX、PPTX、CSV 和 PDF 等文件类型。</font><code>textract</code></p>
@@ -945,19 +762,7 @@ rag.delete_by_doc_id(&quot;doc_id&quot;)" tabindex="0" role="button">
 <span class="pl-s1">text_content</span> <span class="pl-c1">=</span> <span class="pl-s1">textract</span>.<span class="pl-c1">process</span>(<span class="pl-s1">file_path</span>)
 
 <span class="pl-s1">rag</span>.<span class="pl-c1">insert</span>(<span class="pl-s1">text_content</span>.<span class="pl-c1">decode</span>(<span class="pl-s">'utf-8'</span>))</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="import textract
-
-file_path = 'TEXT.pdf'
-text_content = textract.process(file_path)
-
-rag.insert(text_content.decode('utf-8'))" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+    
   </div></div>
 <div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="14706731" _msthash="393">图形可视化</h3><a id="user-content-graph-visualization" class="anchor" aria-label="永久链接：图形可视化" href="#graph-visualization" _mstaria-label="779844" _msthash="394"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <details>
@@ -979,27 +784,7 @@ rag.insert(text_content.decode('utf-8'))" tabindex="0" role="button">
 
 <span class="pl-c"># Save and display the network</span>
 <span class="pl-s1">net</span>.<span class="pl-c1">show</span>(<span class="pl-s">'knowledge_graph.html'</span>)</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="import networkx as nx
-from pyvis.network import Network
-
-# Load the GraphML file
-G = nx.read_graphml('./dickens/graph_chunk_entity_relation.graphml')
-
-# Create a Pyvis network
-net = Network(notebook=True)
-
-# Convert NetworkX graph to Pyvis network
-net.from_nx(G)
-
-# Save and display the network
-net.show('knowledge_graph.html')" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+    
   </div></div>
 </details>
 <details>
@@ -1125,131 +910,7 @@ net.show('knowledge_graph.html')" tabindex="0" role="button">
 
 <span class="pl-k">if</span> <span class="pl-s1">__name__</span> <span class="pl-c1">==</span> <span class="pl-s">"__main__"</span>:
     <span class="pl-en">main</span>()</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="import os
-import json
-from lightrag.utils import xml_to_json
-from neo4j import GraphDatabase
-
-# Constants
-WORKING_DIR = &quot;./dickens&quot;
-BATCH_SIZE_NODES = 500
-BATCH_SIZE_EDGES = 100
-
-# Neo4j connection credentials
-NEO4J_URI = &quot;bolt://localhost:7687&quot;
-NEO4J_USERNAME = &quot;neo4j&quot;
-NEO4J_PASSWORD = &quot;your_password&quot;
-
-def convert_xml_to_json(xml_path, output_path):
-    &quot;&quot;&quot;Converts XML file to JSON and saves the output.&quot;&quot;&quot;
-    if not os.path.exists(xml_path):
-        print(f&quot;Error: File not found - {xml_path}&quot;)
-        return None
-
-    json_data = xml_to_json(xml_path)
-    if json_data:
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(json_data, f, ensure_ascii=False, indent=2)
-        print(f&quot;JSON file created: {output_path}&quot;)
-        return json_data
-    else:
-        print(&quot;Failed to create JSON data&quot;)
-        return None
-
-def process_in_batches(tx, query, data, batch_size):
-    &quot;&quot;&quot;Process data in batches and execute the given query.&quot;&quot;&quot;
-    for i in range(0, len(data), batch_size):
-        batch = data[i:i + batch_size]
-        tx.run(query, {&quot;nodes&quot;: batch} if &quot;nodes&quot; in query else {&quot;edges&quot;: batch})
-
-def main():
-    # Paths
-    xml_file = os.path.join(WORKING_DIR, 'graph_chunk_entity_relation.graphml')
-    json_file = os.path.join(WORKING_DIR, 'graph_data.json')
-
-    # Convert XML to JSON
-    json_data = convert_xml_to_json(xml_file, json_file)
-    if json_data is None:
-        return
-
-    # Load nodes and edges
-    nodes = json_data.get('nodes', [])
-    edges = json_data.get('edges', [])
-
-    # Neo4j queries
-    create_nodes_query = &quot;&quot;&quot;
-    UNWIND $nodes AS node
-    MERGE (e:Entity {id: node.id})
-    SET e.entity_type = node.entity_type,
-        e.description = node.description,
-        e.source_id = node.source_id,
-        e.displayName = node.id
-    REMOVE e:Entity
-    WITH e, node
-    CALL apoc.create.addLabels(e, [node.entity_type]) YIELD node AS labeledNode
-    RETURN count(*)
-    &quot;&quot;&quot;
-
-    create_edges_query = &quot;&quot;&quot;
-    UNWIND $edges AS edge
-    MATCH (source {id: edge.source})
-    MATCH (target {id: edge.target})
-    WITH source, target, edge,
-         CASE
-            WHEN edge.keywords CONTAINS 'lead' THEN 'lead'
-            WHEN edge.keywords CONTAINS 'participate' THEN 'participate'
-            WHEN edge.keywords CONTAINS 'uses' THEN 'uses'
-            WHEN edge.keywords CONTAINS 'located' THEN 'located'
-            WHEN edge.keywords CONTAINS 'occurs' THEN 'occurs'
-           ELSE REPLACE(SPLIT(edge.keywords, ',')[0], '\&quot;', '')
-         END AS relType
-    CALL apoc.create.relationship(source, relType, {
-      weight: edge.weight,
-      description: edge.description,
-      keywords: edge.keywords,
-      source_id: edge.source_id
-    }, target) YIELD rel
-    RETURN count(*)
-    &quot;&quot;&quot;
-
-    set_displayname_and_labels_query = &quot;&quot;&quot;
-    MATCH (n)
-    SET n.displayName = n.id
-    WITH n
-    CALL apoc.create.setLabels(n, [n.entity_type]) YIELD node
-    RETURN count(*)
-    &quot;&quot;&quot;
-
-    # Create a Neo4j driver
-    driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USERNAME, NEO4J_PASSWORD))
-
-    try:
-        # Execute queries in batches
-        with driver.session() as session:
-            # Insert nodes in batches
-            session.execute_write(process_in_batches, create_nodes_query, nodes, BATCH_SIZE_NODES)
-
-            # Insert edges in batches
-            session.execute_write(process_in_batches, create_edges_query, edges, BATCH_SIZE_EDGES)
-
-            # Set displayName and labels
-            session.run(set_displayname_and_labels_query)
-
-    except Exception as e:
-        print(f&quot;Error occurred: {e}&quot;)
-
-    finally:
-        driver.close()
-
-if __name__ == &quot;__main__&quot;:
-    main()" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+     
   </div></div>
 </details>
 <div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="25109279" _msthash="399">LightRAG 初始化参数</h3><a id="user-content-lightrag-init-parameters" class="anchor" aria-label="永久链接：LightRAG 初始化参数" href="#lightrag-init-parameters" _mstaria-label="957086" _msthash="400"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
