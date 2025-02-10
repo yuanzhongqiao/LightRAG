@@ -664,7 +664,7 @@ await rag.apipeline_process_enqueue_documents(string_or_strings)" tabindex="0" r
     embeddings = model.encode(texts, convert_to_numpy=True)
     return embeddings
 
-# Initialize LightRAG with the LLM model function and embedding function
+#Initialize LightRAG with the LLM model function and embedding function
     rag = LightRAG(
         working_dir=WORKING_DIR,
         llm_model_func=llm_model_func,
