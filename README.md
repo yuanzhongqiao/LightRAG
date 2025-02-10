@@ -58,28 +58,13 @@
 </ul>
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-c1">cd</span> LightRAG
 pip install -e <span class="pl-c1">.</span></pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="cd LightRAG
-pip install -e ." tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+    
   </div></div>
 <ul dir="auto">
 <li _msttexthash="11451895" _msthash="293">从 PyPI 安装</li>
 </ul>
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>pip install lightrag-hku</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="pip install lightrag-hku" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+    
   </div></div>
 <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="11905335" _msthash="294">快速开始</h2><a id="user-content-quick-start" class="anchor" aria-label="永久链接：快速入门" href="#quick-start" _mstaria-label="437814" _msthash="295"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <ul dir="auto">
@@ -89,14 +74,7 @@ pip install -e ." tabindex="0" role="button">
 <li _msttexthash="129448839" _msthash="299">下载演示文本“查尔斯·狄更斯的圣诞颂歌”：</li>
 </ul>
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>curl https://raw.githubusercontent.com/gusye1234/nano-graphrag/main/tests/mock_data.txt <span class="pl-k">&gt;</span> ./book.txt</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="curl https://raw.githubusercontent.com/gusye1234/nano-graphrag/main/tests/mock_data.txt > ./book.txt" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+    
   </div></div>
 <p dir="auto" _msttexthash="229945053" _msthash="300">使用以下 Python 代码段（在脚本中）初始化 LightRAG 并执行查询：</p>
 <div class="highlight highlight-source-python notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-k">import</span> <span class="pl-s1">os</span>
@@ -144,58 +122,7 @@ pip install -e ." tabindex="0" role="button">
 <span class="pl-c"># - Allows control over retrieval depth via top_k parameter</span>
 <span class="pl-en">print</span>(<span class="pl-s1">rag</span>.<span class="pl-c1">query</span>(<span class="pl-s">"What are the top themes in this story?"</span>, <span class="pl-s1">param</span><span class="pl-c1">=</span><span class="pl-en">QueryParam</span>(
     <span class="pl-s1">mode</span><span class="pl-c1">=</span><span class="pl-s">"mix"</span>)))</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="import os
-from lightrag import LightRAG, QueryParam
-from lightrag.llm.openai import gpt_4o_mini_complete, gpt_4o_complete
-
-#########
-# Uncomment the below two lines if running in a jupyter notebook to handle the async nature of rag.insert()
-# import nest_asyncio
-# nest_asyncio.apply()
-#########
-
-WORKING_DIR = &quot;./dickens&quot;
-
-
-if not os.path.exists(WORKING_DIR):
-    os.mkdir(WORKING_DIR)
-
-rag = LightRAG(
-    working_dir=WORKING_DIR,
-    llm_model_func=gpt_4o_mini_complete  # Use gpt_4o_mini_complete LLM model
-    # llm_model_func=gpt_4o_complete  # Optionally, use a stronger model
-)
-
-with open(&quot;./book.txt&quot;) as f:
-    rag.insert(f.read())
-
-# Perform naive search
-print(rag.query(&quot;What are the top themes in this story?&quot;, param=QueryParam(mode=&quot;naive&quot;)))
-
-# Perform local search
-print(rag.query(&quot;What are the top themes in this story?&quot;, param=QueryParam(mode=&quot;local&quot;)))
-
-# Perform global search
-print(rag.query(&quot;What are the top themes in this story?&quot;, param=QueryParam(mode=&quot;global&quot;)))
-
-# Perform hybrid search
-print(rag.query(&quot;What are the top themes in this story?&quot;, param=QueryParam(mode=&quot;hybrid&quot;)))
-
-# Perform mix search (Knowledge Graph + Vector Retrieval)
-# Mix mode combines knowledge graph and vector search:
-# - Uses both structured (KG) and unstructured (vector) information
-# - Provides comprehensive answers by analyzing relationships and context
-# - Supports image content through HTML img tags
-# - Allows control over retrieval depth via top_k parameter
-print(rag.query(&quot;What are the top themes in this story?&quot;, param=QueryParam(
-    mode=&quot;mix&quot;)))" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+    
   </div></div>
 <div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="29072966" _msthash="301">对话历史记录支持</h3><a id="user-content-conversation-history-support" class="anchor" aria-label="永久链接：对话历史记录支持" href="#conversation-history-support" _mstaria-label="1227161" _msthash="302"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <p dir="auto" _msttexthash="294178573" _msthash="303">LightRAG 现在通过对话历史记录功能支持多回合对话。以下是如何使用它：</p>
@@ -223,37 +150,7 @@ print(rag.query(&quot;What are the top themes in this story?&quot;, param=QueryP
     <span class="pl-s">"What causes this change in his character?"</span>,
     <span class="pl-s1">param</span><span class="pl-c1">=</span><span class="pl-s1">query_param</span>
 )</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="from lightrag import LightRAG, QueryParam
-
-# Initialize LightRAG
-rag = LightRAG(working_dir=WORKING_DIR)
-
-# Create conversation history
-conversation_history = [
-    {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;What is the main character's attitude towards Christmas?&quot;},
-    {&quot;role&quot;: &quot;assistant&quot;, &quot;content&quot;: &quot;At the beginning of the story, Ebenezer Scrooge has a very negative attitude towards Christmas...&quot;},
-    {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;How does his attitude change?&quot;}
-]
-
-# Create query parameters with conversation history
-query_param = QueryParam(
-    mode=&quot;mix&quot;,  # or any other mode: &quot;local&quot;, &quot;global&quot;, &quot;hybrid&quot;
-    conversation_history=conversation_history,  # Add the conversation history
-    history_turns=3  # Number of recent conversation turns to consider
-)
-
-# Make a query that takes into account the conversation history
-response = rag.query(
-    &quot;What causes this change in his character?&quot;,
-    param=query_param
-)" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+    
   </div></div>
 <div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="23893870" _msthash="304">自定义提示支持</h3><a id="user-content-custom-prompt-support" class="anchor" aria-label="永久链接：自定义提示支持" href="#custom-prompt-support" _mstaria-label="842309" _msthash="305"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <p dir="auto" _msttexthash="373296807" _msthash="306">LightRAG 现在支持自定义提示，以便对系统行为进行微调控制。以下是如何使用它：</p>
@@ -284,40 +181,7 @@ response = rag.query(
     <span class="pl-s1">prompt</span><span class="pl-c1">=</span><span class="pl-s1">custom_prompt</span>  <span class="pl-c"># Pass the custom prompt</span>
 )
 <span class="pl-en">print</span>(<span class="pl-s1">response_custom</span>)</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="from lightrag import LightRAG, QueryParam
-
-# Initialize LightRAG
-rag = LightRAG(working_dir=WORKING_DIR)
-
-# Create query parameters
-query_param = QueryParam(
-    mode=&quot;hybrid&quot;,  # or other mode: &quot;local&quot;, &quot;global&quot;, &quot;hybrid&quot;
-)
-
-# Example 1: Using the default system prompt
-response_default = rag.query(
-    &quot;What are the primary benefits of renewable energy?&quot;,
-    param=query_param
-)
-print(response_default)
-
-# Example 2: Using a custom prompt
-custom_prompt = &quot;&quot;&quot;
-You are an expert assistant in environmental science. Provide detailed and structured answers with examples.
-&quot;&quot;&quot;
-response_custom = rag.query(
-    &quot;What are the primary benefits of renewable energy?&quot;,
-    param=query_param,
-    prompt=custom_prompt  # Pass the custom prompt
-)
-print(response_custom)" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+   
   </div></div>
 <details>
 <summary _msttexthash="18189275" _msthash="307">使用类似 Open AI 的 API</summary>
@@ -354,43 +218,7 @@ print(response_custom)" tabindex="0" role="button">
         <span class="pl-s1">func</span><span class="pl-c1">=</span><span class="pl-s1">embedding_func</span>
     )
 )</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="async def llm_model_func(
-    prompt, system_prompt=None, history_messages=[], keyword_extraction=False, **kwargs
-) -> str:
-    return await openai_complete_if_cache(
-        &quot;solar-mini&quot;,
-        prompt,
-        system_prompt=system_prompt,
-        history_messages=history_messages,
-        api_key=os.getenv(&quot;UPSTAGE_API_KEY&quot;),
-        base_url=&quot;https://api.upstage.ai/v1/solar&quot;,
-        **kwargs
-    )
-
-async def embedding_func(texts: list[str]) -> np.ndarray:
-    return await openai_embed(
-        texts,
-        model=&quot;solar-embedding-1-large-query&quot;,
-        api_key=os.getenv(&quot;UPSTAGE_API_KEY&quot;),
-        base_url=&quot;https://api.upstage.ai/v1/solar&quot;
-    )
-
-rag = LightRAG(
-    working_dir=WORKING_DIR,
-    llm_model_func=llm_model_func,
-    embedding_func=EmbeddingFunc(
-        embedding_dim=4096,
-        max_token_size=8192,
-        func=embedding_func
-    )
-)" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+ 
   </div></div>
 </details>
 <details>
